@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+<body>
+	<div id="main">123132
+    </div>
+    <p>设置img1.jpg为div.img1的背景图</p>
+    <div id="img1" class="img1 icon-img1"></div>
+    <p>设置img3.jpg为div.img3的背景图</p>
+    <div id="img3" class="img3"></div>
+    <p>设置img3.jpg为div.img2的子元素</p>
+    <div id="img2" class="img2"></div>
+    <!-- 引入图片方法一:file-loader+模板字符串 ejs语法 -->
+    <!-- 不使用html-loader的话html中直接引入图片不会被处理 -->
+    <!-- 兼容性 file-loader  4.1-4.2这样写没问题  现在直接安装的是5.0以上的版本  img的src属性会变成[Object] -->
+    <!-- <img src="${require('./img/img1.jpg')}"> -->
+    <!-- 可以通过模板字符串的形式拿到在htmlWebpackPlugin中定义的属性值 -->
+    <!-- <div>${htmlWebpackPlugin.options.defaultAttr}</div> -->
+    <!-- 引入图片方法二:html-loader -->
+    <img src="./img/img2.png" alt="">
+    <!-- 懒加载 -->
+    <img src="" data-src="./img/img1.jpg" alt="">
+    <p>对于视频的处理</p>
+    <video src="./video/夜店-DJ何鹏-张冬玲 - 带我去看海 .mp4" controls></video>
+</body>
+<link rel="stylesheet" href="../sprites/sprites.css" controls>
+<!-- <script src="./src/mybuild/js/app111.8.js"></script> -->
+<!-- 因为我使用了html-loader   所以这里不能用模板字符串 -->
+<!-- <script src="${htmlWebpackPlugin.options.vendorPath}"></script> -->
+<script src="../dll/vendor.js"></script>
+</html>

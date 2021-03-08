@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* 全局属性 */
+:global .border-white{
+	border: 4px solid white;
+}
+:local(.borderBlue){
+	border: 4px solid blue;
+}
+/* 局部属性 */
+/* 对于设置为局部类名属性或者没有设置的类名进行编码 如:.div1=>._2XKJX4oJJ9vY5ICxta8brP */
+:local .main{
+	width: 100px;
+	height: 100px;
+	background: pink;
+	/* composes:border-white; *//*在引用全局属性的时候not found 暂时使用局部属性*/
+	composes:borderBlue;
+	composes:border-yellow from './a.less';
+}
+
+.img1{
+	display: inline-block;
+	width: 300px;
+	height: 100px;
+	background: url('../img/img1.jpg') no-repeat center/cover;
+}
+.img2{
+	display: inline-block;
+	width: 300px;
+	height: 100px;
+}
+.img3{
+	display: inline-block;
+	width: 300px;
+	height: 100px;
+	background: url('../img/img3.jpg') no-repeat center/cover;
+}
