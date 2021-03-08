@@ -126,9 +126,9 @@ module.exports = env => {
 									require('imagemin-mozjpeg')({
 										quality:60 //值为1-100   数值越小  压缩越狠  一般为60-80之间
 									}),
-									require('imagemin-gifsicle')({
-										optimizationLevel:1//1 2 3   数值越大 压缩越狠    本身就很模糊 经不起压缩  一般为1 
-									})
+									// require('imagemin-gifsicle')({
+										// optimizationLevel:1//1 2 3   数值越大 压缩越狠    本身就很模糊 经不起压缩  一般为1 
+									// })
 								]
 							}
 						},
@@ -220,7 +220,7 @@ module.exports = env => {
 							{
 								loader: 'postcss-loader',
 								options: {
-									ident: 'postcss-loader',//接下来定义的plugin是给谁用的  这里应该是postcss
+									ident: 'postcss-loader',//接下来定义的plugin是给谁用的  这里ident应该是postcss而不是postcss-loader
 									plugins: [
 										//引用并调用
 										require('autoprefixer')(
