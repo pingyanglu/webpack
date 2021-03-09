@@ -5,9 +5,8 @@
   "main": "a.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --open",
-    "build": "webpack --config webpack.config.js",
-    "build2": "webpack --config webpack.dll.js"
+    "dev": "webpack-dev-server --env development --config webpack.common.js --open",
+    "build": "webpack --config webpack.common.js --env production"
   },
   "keywords": [],
   "author": "",
@@ -52,7 +51,8 @@
     "postcss-loader": "^3.0.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.41.4",
-    "webpack-dev-server": "^3.10.1"
+    "webpack-dev-server": "^3.10.1",
+    "webpack-merge": "^5.7.3"
   },
   "browserslist": [
     ">1%",
