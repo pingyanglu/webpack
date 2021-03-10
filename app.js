@@ -1,14 +1,14 @@
 // import 'babel-polyfill'
-import './test.ts'
+// import './test.ts'
 // import a from './css/a.css'
 // import index from './css/index.css'
-import a from './css/a.less'
-import index from './css/index.less'
-import f1 from './module1.js'
+// import a from './css/a.less'
+// import index from './css/index.less'
+// import f1 from './module1.js'
 /* 引入自定义的.cjj文件 */
-import  './cjj/index.cjj'
+// import  './cjj/index.cjj'
 //loadsh
-import lod from "loadsh";
+// import lod from "loadsh";
 
 import ma from "./modulea.js";
 import * as mb from "./moduleb.js";
